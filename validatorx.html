@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>validatorx</title>
+	<style>
+		#form-validatorx{
+            max-width: 900px;
+			margin: 0 auto;
+		}
+		#form-validatorx .field-item{
+			margin-bottom: 10px;
+            padding-left: 30px;
+		}
+		#form-validatorx .field-item label{
+			display: inline-block;
+			width: 120px;
+			line-height: 40px;
+			text-align: left;
+		}
+		#form-validatorx .field-item label span{
+			color: red;
+		}
+		#form-validatorx .field-item input{
+			outline: 0 none;
+			display: inline-block;
+			vertical-align: top;
+			border: 1px solid #ccc;
+			width: 250px;
+			height: 34px;
+			padding-left: 10px;
+			line-height: 34px;
+		}
+        .btn-item{
+           background: #f10000;
+           color: #fff;
+           border-radius: 3px;
+           border: 0;
+           width: 58%;
+           height: 50px;
+           font-size: 20px;
+           font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+           letter-spacing: 7px;
+
+        }
+	</style>
+</head>
+<body>
+	<form id="form-validatorx" class="ui-form" method="get" action="">
+    <div class="field-item">
+        <label for="username"><span>*</span> 注册用户名：</label>
+        <input id="username" name="name" class="input-item" type="text" value="" maxlength="20"
+        autocomplete="off" required="用户名不能为空"/>
+    </div>
+    <div class="field-item">
+        <label for="password"><span>*</span> 登录密码：</label>
+        <input id="password" name="password" class="input-item" type="password" maxlength="20" value="" required="密码不能为空"/>
+    </div>
+     <div class="field-item">
+        <label for="email"><span>*</span> 电子邮箱：</label>
+        <input id="email" name="email" type="text" class="input-item" value=""/>
+    </div>
+     <div class="field-item">
+        <label for="zip-code"><span>*</span> 邮政编码：</label>
+        <input id="zip-code" name="zipcode" class="input-item" value="" maxlength="6"/>
+    </div>
+<!--          <div class="field-item">
+        <label for="confirm-password"><span>*</span> 确认密码：</label>
+        <input id="confirm-password" class="input-item" name="confirm-password" maxlength="20" type="password"
+               value=""/>
+    </div>
+<div class="field-item">
+        <label for="age">年龄：</label>
+        <input id="age" name="age" class="input-item" type="text" value="" maxlength="3"/>
+    </div>
+    <div class="field-item">
+        <label for="birthday">生日：</label>
+        <input id="birthday" name="birthday" class="input-item" type="text" value="" maxlength="10"/>
+    </div>
+    <div class="field-item">
+        <label for="card-type">证件类型：</label>
+        <select name="card-type" id="card-type" class="select-item">
+            <option value="1">身份证</option>
+            <option value="2">军人证</option>
+        </select>
+    </div>
+    <div class="field-item">
+        <label for="id-card">证件号码：</label>
+        <input id="id-card" type="text" name="id-card" class="input-item" value=""/>
+    </div>
+   
+    <div class="field-item">
+        <label for="qq">QQ：</label>
+        <input id="qq" name="qq" class="input-item" type="text" value=""/>
+    </div>
+    <div class="field-item">
+        <label for="telephone">固定电话：</label>
+        <input id="telephone" name="telephone" class="input-item" type="text" value="" maxlength="8"/>
+    </div>
+    <div class="field-item">
+        <label for="mobile">手机：</label>
+        <input id="mobile" name="mobile" type="text" class="input-item" value="" maxlength="11"/>
+    </div>
+    <div class="field-item">
+        <label for="phone"><span>*</span> 联系电话：</label>
+        <input id="phone" name="phone" type="text" class="input-item" value="" maxlength="11"/>
+    </div>
+   
+    <div class="field-item">
+        <label for="ip-address">登录IP地址：</label>
+        <input id="ip-address" name="ip-address" class="input-item" type="text" value="" maxlength="15"/>
+    </div>
+    <div class="field-item">
+        <label for="url">个人主页：</label>
+        <input id="url" name="url" class="input-item" type="text" value="" maxlength="100"/>
+    </div>
+    <div class="field-item">
+        <label for="message"><span>*</span> 留言：</label>
+        <textarea id="message" class="textarea-item" name="message" rows="5" cols="100" max=300></textarea>
+    </div> -->
+    <div class="field-item field-item-space" style="text-align:center">
+        <button name="btnsubmit" id="btnsubmit" type="submit" value=" 确定提交 " class="btn-item">确定提交</button>
+        <!-- <input name="reset" id="reset" type="button" value="重设" class="btn-item"/> -->
+    </div>
+</form>
+<script src="./public/js/validator.js"></script>
+<script>
+    var myform = vali({
+        "form":"form-validatorx",
+         checkType : 1
+    })
+
+</script>
+</body>
+</html>
